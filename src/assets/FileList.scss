@@ -1,0 +1,128 @@
+@import "./GlobalStyle.scss";
+.list-container {
+  background-color: #fff;
+  height: 88%;
+  border-radius: 5px;
+  padding: 40px;
+  margin-right: 20px;
+  .modal-background {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  .delete-modal {
+    z-index: 2;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 300px;
+    height: fit-content;
+    box-shadow: $main-shadow;
+    border-radius: 5px;
+    backdrop-filter: blur(7px);
+    background-color: #fff;
+    .confirm-text {
+      text-align: center;
+      margin: 50px 0;
+    }
+    .btn-handle {
+      border-top: 1px solid $border-color;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-evenly;
+      button {
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        min-width: 90px;
+        padding: 10px;
+        border: 2px solid $button-color;
+      }
+      .avoid-btn {
+        background-color: $button-color;
+        color: #fff;
+      }
+      .confirm-btn {
+        background: none;
+        color: $button-color;
+        display: flex;
+        justify-content: center;
+        transition: 0.3s;
+        &:disabled{
+          background: #ccc;
+          color: #fff;
+          border: 2px solid #ccc;
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+    border-collapse: collapse;
+    tr {
+      transform: scaleX(-40px);
+      th {
+        border-bottom: 1px solid $border-color;
+        padding: 15px 10px;
+      }
+      td {
+        cursor: pointer;
+        border-bottom: 1px solid $border-color;
+        padding: 15px 10px;
+        button {
+          background: red;
+          border-radius: 5px;
+          color: #fff;
+          padding: 5px 10px;
+          cursor: pointer;
+          svg{
+            margin-right: 10px;
+            font-size: 12px;
+          }
+        }
+      }
+      &:hover td {
+        background-color: #f2f2f2;
+      }
+    }
+  }
+  nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    .pagination {
+      border-left: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      border-top: 1px solid $border-color;
+      display: flex;
+      .page-item {
+        button {
+          transition: 0.3s;
+          padding: 10px 15px;
+          color: $button-color;
+          font-weight: bold;
+          border-collapse: collapse;
+          border-right: 1px solid $border-color;
+          cursor: pointer;
+        }
+      }
+      .active {
+        button {
+          background-color: $button-color;
+          color: #fff;
+          // border-radius: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "./GlobalStyle.scss";
+header {
+  height: 10%;
+  .header-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+  }
+}
