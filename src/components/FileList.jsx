@@ -114,7 +114,7 @@ const FileList = () => {
           <ul className="pagination">
             <li className="page-item">
               <button onClick={() => prevPage()} type="button">
-                <i className="fa-solid fa-angle-left"></i> Xóa
+                <i className="fa-solid fa-angle-left"></i>
               </button>
             </li>
             {numbers.map((n, i) => (

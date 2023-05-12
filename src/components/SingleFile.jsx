@@ -5,7 +5,7 @@ import { DataContext } from "../Context/DataContext";
 import { CSVLink } from "react-csv";
 const SingleFile = () => {
   const { tableId } = useParams();
-  const { fileData, updateData, updateLoading } = useContext(DataContext);
+  const { fileData, updateData } = useContext(DataContext);
   const singleTable = fileData && fileData.find((data) => data.id === tableId);
   const [data, setData] = useState([]);
   let timer = null;
@@ -50,9 +50,9 @@ const SingleFile = () => {
           <table>
             <thead>
               <tr>
-                {singleTable?.data.columnArr.map((col, index) => (
-                  <th key={index}>{col}</th>
-                ))}
+                {singleTable?.data.columnArr.map((col, index) => {
+                  return <th key={index}>{col}</th>;
+                })}
               </tr>
             </thead>
             <tbody>
