@@ -38,7 +38,7 @@ export const DataProvider = ({ children }) => {
     getData();
   }, []);
   // read file
-  const importFile = async (file) => {
+  const importFile = (file) => {
     Papa.parse(file, {
       header: true,
       skipEmptyLines: true,
